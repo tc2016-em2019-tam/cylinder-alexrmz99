@@ -1,13 +1,16 @@
 package com.company;
 
 public class Cylinder extends Circle {
-    private double height = 1.0;
+    private double height;
 
     public Cylinder() {
+        super();
+        this.height = 1.0;
     }
 
     public Cylinder(double radius) {
         super(radius);
+        this.height = 1.0;
     }
 
     public Cylinder(double radius, double height) {
@@ -34,16 +37,16 @@ public class Cylinder extends Circle {
 
     @Override
     public double getArea() {
-        return 2 * Math.PI * getRadius() * height + 2 * super.getArea();
+        return (2 * Math.PI * getRadius() * this.height + 2 * super.getArea());
     }
 
-    public double getBaseArea (){
+    public double getBaseArea() {
         return super.getArea();
     }
 
     @Override
     public String toString() {
-        return "Cylinder: subclass of " + super.toString() + "height =" + height;
+        return "Cylinder: subclass of " + super.toString() + "height =" + this.height;
     }
 }
 

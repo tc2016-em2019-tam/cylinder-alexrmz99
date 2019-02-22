@@ -1,10 +1,12 @@
 package com.company;
 
 public class Circle {
-    private double radius = 1.0;
-    private String color = "red";
+    private double radius;
+    private String color;
 
     public Circle(){
+        this.radius = 1.0;
+        this.color="red";
     }
 
     public Circle(double radius) {
@@ -33,7 +35,7 @@ public class Circle {
     }
 
     public double getArea() {
-        return Math.PI * this.radius * this.radius;
+        return Math.PI * Math.pow(radius, 2);
     }
 
     @Override
